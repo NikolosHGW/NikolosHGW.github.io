@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TODO</title>
+</head>
+<body>
+    <form name="td">
+        <input type="text" name="todo" placeholder="Заголовок" />
+        <input type="button" name="add" value="Добавить" />
+    </form>
+
+    <div id="list"></div>
+
+    <script>
+        function printForm(e) {
+
+            var Todo = document.td.todo;
+            var val = Todo.value;
+            var list = document.getElementById("list");
+            var pList = document.createElement("p")
+            pList.textContent = val;
+            list.appendChild(pList);
+        }
+
+        var addButton = document.td.add;
+        addButton.addEventListener("click", printForm);
+    </script>
+</body>
+</html>
